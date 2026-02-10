@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <title>KL Travel Guide 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -12,6 +12,8 @@
         .timeline-line { width: 2px; background: linear-gradient(to bottom, #d4af37, #0f172a); }
         .gold-text { color: #d4af37; }
         .gold-bg { background-color: #d4af37; }
+        .card-fallback { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); position: relative; overflow: hidden; }
+        .card-fallback::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 50%); }
     </style>
 </head>
 <body class="pb-24">
@@ -43,8 +45,8 @@
         <!-- Stop 0 -->
         <div class="relative pl-16 mb-12">
             <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
-            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
-                <img src="https://images.unsplash.com/photo-1596288647000-0e54d852a392?auto=format&fit=crop&q=80&w=800" alt="KLIA" class="w-full h-48 object-cover">
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02] card-fallback">
+                <img src="https://picsum.photos/id/1039/800/600" onerror="this.parentElement.style.display='none'" alt="KLIA" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -81,8 +83,8 @@
         <!-- Stop 1 -->
         <div class="relative pl-16 mb-12">
             <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
-            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
-                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=800" alt="Luna Hotel" class="w-full h-48 object-cover">
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02] card-fallback">
+                <img src="https://picsum.photos/id/1029/800/600" onerror="this.parentElement.style.display='none'" alt="Luna Hotel" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -119,8 +121,8 @@
         <!-- Stop 2 -->
         <div class="relative pl-16 mb-12">
             <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
-            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
-                <img src="https://images.unsplash.com/photo-1541512416146-3cf58d6b27cc?auto=format&fit=crop&q=80&w=800" alt="ICC Pudu" class="w-full h-48 object-cover">
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02] card-fallback">
+                <img src="https://picsum.photos/id/1054/800/600" onerror="this.parentElement.style.display='none'" alt="ICC Pudu" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -157,8 +159,8 @@
         <!-- Stop 3 -->
         <div class="relative pl-16 mb-12">
             <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
-            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
-                <img src="https://images.unsplash.com/photo-1528605248644-14dd04cb220d?auto=format&fit=crop&q=80&w=800" alt="Kwai Chai Hong" class="w-full h-48 object-cover">
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02] card-fallback">
+                <img src="https://picsum.photos/id/1053/800/600" onerror="this.parentElement.style.display='none'" alt="Kwai Chai Hong" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -195,8 +197,8 @@
         <!-- Stop 4 -->
         <div class="relative pl-16 mb-12">
             <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
-            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
-                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="VCR Coffee" class="w-full h-48 object-cover">
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02] card-fallback">
+                <img src="https://picsum.photos/id/1060/800/600" onerror="this.parentElement.style.display='none'" alt="VCR Coffee" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -206,7 +208,7 @@
                         <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">09:00 AM</span>
                     </div>
                     <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                        藏在老建筑里的精品咖啡店。这里的 Avocoda Toast 和 手冲咖啡能把你从长途飞行的疲惫中彻底唤醒。在这个充满设计感的空间里，虚度半小时光阴。
+                        藏在老建筑里的精品咖啡店。这里的 Avocoda Toast 和 手冲咖啡能把你从长途飞年的疲惫中彻底唤醒。在这个充满设计感的空间里，虚度半小时光阴。
                     </p>
                     <div class="flex gap-3">
                         <a href="comgooglemaps://?q=VCR+Jalan+Galloway" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 rounded-lg text-center text-sm font-medium transition">Google Maps</a>
@@ -219,8 +221,8 @@
         <!-- Stop 5 -->
         <div class="relative pl-16 mb-12">
             <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
-            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
-                <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&q=80&w=800" alt="Petronas Towers" class="w-full h-48 object-cover">
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02] card-fallback">
+                <img src="https://picsum.photos/id/1062/800/600" onerror="this.parentElement.style.display='none'" alt="Petronas Towers" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -243,8 +245,8 @@
         <!-- Stop 6 -->
         <div class="relative pl-16 mb-12">
             <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
-            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
-                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800" alt="Madam Kwan's" class="w-full h-48 object-cover">
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02] card-fallback">
+                <img src="https://picsum.photos/id/1080/800/600" onerror="this.parentElement.style.display='none'" alt="Madam Kwan's" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -267,8 +269,8 @@
         <!-- Stop 7 -->
         <div class="relative pl-16 mb-12">
             <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
-            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
-                <img src="https://images.unsplash.com/photo-1544161515-4ae6ce6ca8b8?auto=format&fit=crop&q=80&w=800" alt="Liang Xin" class="w-full h-48 object-cover">
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02] card-fallback">
+                <img src="https://picsum.photos/id/1081/800/600" onerror="this.parentElement.style.display='none'" alt="Liang Xin" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -291,8 +293,8 @@
         <!-- Stop 8 -->
         <div class="relative pl-16 mb-12">
             <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
-            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
-                <img src="https://images.unsplash.com/photo-1555620246-8be05f661081?auto=format&fit=crop&q=80&w=800" alt="Heli Lounge Bar" class="w-full h-48 object-cover">
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02] card-fallback">
+                <img src="https://picsum.photos/id/1082/800/600" onerror="this.parentElement.style.display='none'" alt="Heli Lounge Bar" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -315,8 +317,8 @@
         <!-- Stop 9 -->
         <div class="relative pl-16 mb-12">
             <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
-            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
-                <img src="https://images.unsplash.com/photo-1563833717765-00462801314e?auto=format&fit=crop&q=80&w=800" alt="Wong Ah Wah" class="w-full h-48 object-cover">
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02] card-fallback">
+                <img src="https://picsum.photos/id/111/800/600" onerror="this.parentElement.style.display='none'" alt="Wong Ah Wah" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-4">
                         <div>
