@@ -1,170 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KL 2026 | Premium Travel Guide</title>
+    <title>KL Travel Guide 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #1a1a1a;
-            --accent: #d4af37;
-            --text: #333;
-            --bg: #f4f4f4;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-        header {
-            height: 60vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 0 20px;
-        }
-        header h1 { font-size: 3rem; margin-bottom: 10px; }
-        .container {
-            max-width: 1000px;
-            margin: -50px auto 50px;
-            padding: 0 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-            display: flex;
-            flex-direction: column;
-        }
-        @media (min-width: 768px) {
-            .card { flex-direction: row; }
-            .card-img { width: 45%; }
-            .card-content { width: 55%; }
-        }
-        .card-img {
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-        }
-        .card-content {
-            padding: 30px;
-        }
-        .card h2 { margin-top: 0; color: var(--primary); }
-        .why-section {
-            background: #fffdf5;
-            border-left: 4px solid var(--accent);
-            padding: 15px;
-            margin-top: 20px;
-            font-style: italic;
-        }
-        .tag {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-bottom: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #888;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .timeline-line { width: 2px; background: linear-gradient(to bottom, #d4af37, #0f172a); }
+        .gold-text { color: #d4af37; }
+        .gold-bg { background-color: #d4af37; }
     </style>
 </head>
-<body>
+<body class="pb-24">
 
-<header>
-    <h1>Kuala Lumpur 2026</h1>
-    <p>Experience the Fusion of Culture, Heritage, and Modernity</p>
-</header>
+    <!-- Header -->
+    <header class="p-8 text-center">
+        <h1 class="text-4xl font-bold tracking-tight mb-2">KL Travel Guide <span class="gold-text">2026</span></h1>
+        <p class="text-slate-400">高端吉隆坡特种兵一日游 - 2026 修正版</p>
+    </header>
 
-<div class="container">
-    <!-- Petronas Towers -->
-    <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1596422846543-75c6fc18a594?auto=format&fit=crop&w=800&q=80');"></div>
-        <div class="card-content">
-            <span class="tag">Iconic Landmark</span>
-            <h2>Petronas Twin Towers</h2>
-            <p>Once the tallest buildings in the world, these silver spires remain the definitive symbol of modern Malaysia.</p>
-            <div class="why-section">
-                <strong>Why This Place? / 推荐理由:</strong><br>
-                The architectural heartbeat of KL. Seeing them illuminated at night is a quintessential "arrival" moment in the city. / 吉隆坡的建筑灵魂。夜晚灯光亮起时，那一抹银色足以震撼人心。
-            </div>
+    <!-- Floating Quick Status Bar -->
+    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-md glass rounded-full px-6 py-3 flex justify-between items-center shadow-2xl">
+        <div class="flex items-center gap-2">
+            <span class="text-xs text-slate-400">Balance</span>
+            <span class="font-mono font-bold text-green-400">RM 1,240.00</span>
+        </div>
+        <div class="h-4 w-px bg-slate-700"></div>
+        <div class="flex items-center gap-2">
+            <span class="text-xs text-slate-400">Weather</span>
+            <span class="text-sm">⛈️ 28°C (下午有雨)</span>
         </div>
     </div>
 
-    <!-- ICC Pudu -->
-    <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1626074210452-959c55b706f9?auto=format&fit=crop&w=800&q=80');"></div>
-        <div class="card-content">
-            <span class="tag">Culinary Soul</span>
-            <h2>ICC Pudu Morning Market</h2>
-            <p>A bustling hub where locals gather for the authentic taste of Kuala Lumpur's breakfast heritage.</p>
-            <div class="why-section">
-                <strong>Why This Place? / 推荐理由:</strong><br>
-                The soul of KL breakfast. Try the Ginger Wine Mee to warm your stomach after a cold flight. / 吉隆坡早餐之魂。一碗姜酒米，暖胃又暖心。
+    <!-- Timeline Container -->
+    <main class="max-w-2xl mx-auto px-6 relative">
+        <!-- Vertical Line -->
+        <div class="absolute left-10 top-0 bottom-0 timeline-line opacity-30"></div>
+
+        <!-- Stop 0 -->
+        <div class="relative pl-16 mb-12">
+            <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+                <img src="https://images.unsplash.com/photo-1596288647000-0e54d852a392?auto=format&fit=crop&q=80&w=800" alt="KLIA" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h2 class="text-xl font-bold">KLIA Terminal (T1)</h2>
+                            <p class="gold-text text-sm">吉隆坡国际机场</p>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">03:30 AM</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        吉隆坡之旅的起点。T1 航站楼提供高效的通关体验，特别适合 2026 年全面升级后的自助入境系统。在此换好马币或激活 e-Wallet（GrabPay/Touch'n Go）。
+                    </p>
+                    <div class="grid grid-cols-3 gap-2 mb-6">
+                        <div class="bg-slate-900/50 p-2 rounded text-center">
+                            <p class="text-[10px] text-slate-500 uppercase">Next Stop</p>
+                            <p class="text-xs font-bold">55 km</p>
+                        </div>
+                        <div class="bg-slate-900/50 p-2 rounded text-center">
+                            <p class="text-[10px] text-slate-500 uppercase">Cost</p>
+                            <p class="text-xs font-bold">RM 65-85</p>
+                        </div>
+                        <div class="bg-slate-900/50 p-2 rounded text-center">
+                            <p class="text-[10px] text-slate-500 uppercase">Mode</p>
+                            <p class="text-xs font-bold">Grab / Taxi</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="comgooglemaps://?q=KLIA" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 rounded-lg text-center text-sm font-medium transition">Google Maps</a>
+                        <a href="http://maps.apple.com/?q=KLIA" class="flex-1 bg-white hover:bg-slate-100 text-slate-900 py-2 rounded-lg text-center text-sm font-medium transition">Apple Maps</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Petaling Street -->
-    <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80');"></div>
-        <div class="card-content">
-            <span class="tag">Heritage & Culture</span>
-            <h2>Petaling Street (Chinatown)</h2>
-            <p>Walk through history in the heart of KL, where traditional lanterns hang over modern cafes and historic temples.</p>
-            <div class="why-section">
-                <strong>Why This Place? / 推荐理由:</strong><br>
-                A sensory overload of street food, smells, and history. It's where the city's past meets its vibrant present. / 历史与充满活力的现状在这里交汇，是感受市井气息的最佳去处。
+        <!-- Stop 1 -->
+        <div class="relative pl-16 mb-12">
+            <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=800" alt="Luna Hotel" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h2 class="text-xl font-bold">Luna Hotel</h2>
+                            <p class="gold-text text-sm">莱恩酒店</p>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">04:50 AM</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        抵达您的吉隆坡大本营。在开始疯狂的一天之前，先到前台寄存行李。清晨的酒店大堂安静肃穆，您可以简单洗漱，准备迎接第一缕曙光。
+                    </p>
+                    <div class="grid grid-cols-3 gap-2 mb-6">
+                        <div class="bg-slate-900/50 p-2 rounded text-center">
+                            <p class="text-[10px] text-slate-500 uppercase">Next Stop</p>
+                            <p class="text-xs font-bold">1.2 km</p>
+                        </div>
+                        <div class="bg-slate-900/50 p-2 rounded text-center">
+                            <p class="text-[10px] text-slate-500 uppercase">Cost</p>
+                            <p class="text-xs font-bold">RM 5</p>
+                        </div>
+                        <div class="bg-slate-900/50 p-2 rounded text-center">
+                            <p class="text-[10px] text-slate-500 uppercase">Mode</p>
+                            <p class="text-xs font-bold">Walk / Grab</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="comgooglemaps://?q=Luna+Hotel+KL" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 rounded-lg text-center text-sm font-medium transition">Google Maps</a>
+                        <a href="http://maps.apple.com/?q=Luna+Hotel+KL" class="flex-1 bg-white hover:bg-slate-100 text-slate-900 py-2 rounded-lg text-center text-sm font-medium transition">Apple Maps</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Nasi Lemak -->
-    <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1528605248644-14dd04cb220d?auto=format&fit=crop&w=800&q=80');"></div>
-        <div class="card-content">
-            <span class="tag">Local Flavor</span>
-            <h2>Authentic Nasi Lemak</h2>
-            <p>The unofficial national dish of Malaysia—fragrant coconut rice served with spicy sambal, crispy anchovies, and peanuts.</p>
-            <div class="why-section">
-                <strong>Why This Place? / 推荐理由:</strong><br>
-                No trip is complete without it. It's the flavor of Malaysia in a single plate. / 马来西亚的国民美食，只有吃过椰浆饭，才算完整地体验了这里。
+        <!-- Stop 2 -->
+        <div class="relative pl-16 mb-12">
+            <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+                <img src="https://images.unsplash.com/photo-1541512416146-3cf58d6b27cc?auto=format&fit=crop&q=80&w=800" alt="ICC Pudu" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h2 class="text-xl font-bold">ICC Pudu</h2>
+                            <p class="gold-text text-sm">早餐圣地</p>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">06:00 AM</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        吉隆坡的早餐之魂就在这里。必吃推荐：阿荣哥海南茶（Ann Kheng Hainan Tea）配生熟蛋，以及燕美姜酒米粉。清晨6点的烟火气足以抵消长途飞行的疲惫。
+                    </p>
+                    <div class="grid grid-cols-3 gap-2 mb-6">
+                        <div class="bg-slate-900/50 p-2 rounded text-center">
+                            <p class="text-[10px] text-slate-500 uppercase">Next Stop</p>
+                            <p class="text-xs font-bold">2 km</p>
+                        </div>
+                        <div class="bg-slate-900/50 p-2 rounded text-center">
+                            <p class="text-[10px] text-slate-500 uppercase">Cost</p>
+                            <p class="text-xs font-bold">RM 7</p>
+                        </div>
+                        <div class="bg-slate-900/50 p-2 rounded text-center">
+                            <p class="text-[10px] text-slate-500 uppercase">Mode</p>
+                            <p class="text-xs font-bold">Grab</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="comgooglemaps://?q=ICC+Pudu" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 rounded-lg text-center text-sm font-medium transition">Google Maps</a>
+                        <a href="http://maps.apple.com/?q=ICC+Pudu" class="flex-1 bg-white hover:bg-slate-100 text-slate-900 py-2 rounded-lg text-center text-sm font-medium transition">Apple Maps</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- KL Skyline -->
-    <div class="card">
-        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&w=800&q=80');"></div>
-        <div class="card-content">
-            <span class="tag">Panoramic Views</span>
-            <h2>Sunset Skyline</h2>
-            <p>End your day at a rooftop lounge, watching the urban sprawls of KL transform into a sea of lights.</p>
-            <div class="why-section">
-                <strong>Why This Place? / 推荐理由:</strong><br>
-                Perfect for golden hour photography and capturing the sheer scale of the city's rapid evolution. / 完美的黄金摄影时间，在云端俯瞰这座城市的飞速演变。
+        <!-- Stop 3 -->
+        <div class="relative pl-16 mb-12">
+            <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+                <img src="https://images.unsplash.com/photo-1528605248644-14dd04cb220d?auto=format&fit=crop&q=80&w=800" alt="Kwai Chai Hong" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h2 class="text-xl font-bold">Kwai Chai Hong</h2>
+                            <p class="gold-text text-sm">鬼仔巷</p>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">07:30 AM</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        错峰游览的最佳选择。此时没有任何游客，清晨柔和的光影映在复古壁画上最为动人。这里浓缩了吉隆坡老街的风情，是摄影爱好者的天堂。
+                    </p>
+                    <div class="grid grid-cols-3 gap-2 mb-6">
+                        <div class="bg-slate-900/50 p-2 rounded text-center">
+                            <p class="text-[10px] text-slate-500 uppercase">Next Stop</p>
+                            <p class="text-xs font-bold">1.5 km</p>
+                        </div>
+                        <div class="bg-slate-900/50 p-2 rounded text-center">
+                            <p class="text-[10px] text-slate-500 uppercase">Cost</p>
+                            <p class="text-xs font-bold">RM 6</p>
+                        </div>
+                        <div class="bg-slate-900/50 p-2 rounded text-center">
+                            <p class="text-[10px] text-slate-500 uppercase">Mode</p>
+                            <p class="text-xs font-bold">Grab</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="comgooglemaps://?q=Kwai+Chai+Hong" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 rounded-lg text-center text-sm font-medium transition">Google Maps</a>
+                        <a href="http://maps.apple.com/?q=Kwai+Chai+Hong" class="flex-1 bg-white hover:bg-slate-100 text-slate-900 py-2 rounded-lg text-center text-sm font-medium transition">Apple Maps</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-<footer>
-    <p>&copy; 2026 KL Travel Web. Designed for the discerning traveler.</p>
-</footer>
+        <!-- Stop 4 -->
+        <div class="relative pl-16 mb-12">
+            <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" alt="VCR Coffee" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h2 class="text-xl font-bold">VCR Coffee</h2>
+                            <p class="gold-text text-sm">精品咖啡</p>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">09:00 AM</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        藏在老建筑里的精品咖啡店。这里的 Avocoda Toast 和 手冲咖啡能把你从长途飞行的疲惫中彻底唤醒。在这个充满设计感的空间里，虚度半小时光阴。
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="comgooglemaps://?q=VCR+Jalan+Galloway" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 rounded-lg text-center text-sm font-medium transition">Google Maps</a>
+                        <a href="http://maps.apple.com/?q=VCR+Jalan+Galloway" class="flex-1 bg-white hover:bg-slate-100 text-slate-900 py-2 rounded-lg text-center text-sm font-medium transition">Apple Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stop 5 -->
+        <div class="relative pl-16 mb-12">
+            <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+                <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&q=80&w=800" alt="Petronas Towers" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h2 class="text-xl font-bold">Petronas Towers</h2>
+                            <p class="gold-text text-sm">双子塔 / KLCC</p>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">11:00 AM</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        吉隆坡永恒的地标。推荐去 Suria KLCC 里的 Kinokuniya 书店避避暑，那是东南亚最美的书店之一。或者在 KLCC 公园的特定角度拍摄塔尖。
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="comgooglemaps://?q=KLCC" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 rounded-lg text-center text-sm font-medium transition">Google Maps</a>
+                        <a href="http://maps.apple.com/?q=KLCC" class="flex-1 bg-white hover:bg-slate-100 text-slate-900 py-2 rounded-lg text-center text-sm font-medium transition">Apple Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stop 6 -->
+        <div class="relative pl-16 mb-12">
+            <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800" alt="Madam Kwan's" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h2 class="text-xl font-bold">Madam Kwan's</h2>
+                            <p class="gold-text text-sm">关姐厨房</p>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">01:00 PM</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        最稳妥的辣死你妈 (Nasi Lemak)。关姐厨房代表了标准的马来美食体验，环境优雅且凉快，是在热带中午体面休息并补充体力的绝佳场所。
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="comgooglemaps://?q=Madam+Kwans+KLCC" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 rounded-lg text-center text-sm font-medium transition">Google Maps</a>
+                        <a href="http://maps.apple.com/?q=Madam+Kwans+KLCC" class="flex-1 bg-white hover:bg-slate-100 text-slate-900 py-2 rounded-lg text-center text-sm font-medium transition">Apple Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stop 7 -->
+        <div class="relative pl-16 mb-12">
+            <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+                <img src="https://images.unsplash.com/photo-1544161515-4ae6ce6ca8b8?auto=format&fit=crop&q=80&w=800" alt="Liang Xin" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h2 class="text-xl font-bold">Liang Xin</h2>
+                            <p class="gold-text text-sm">良心按摩</p>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">02:30 PM</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        特种兵续命的关键一站。下午2点最困也最热，来一次正宗的高端足疗或推拿。良心按摩（Liang Xin）以其专业的水准和静谧的环境著称，让身体快速充能。
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="comgooglemaps://?q=Liang+Xin+Massage+KL" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 rounded-lg text-center text-sm font-medium transition">Google Maps</a>
+                        <a href="http://maps.apple.com/?q=Liang+Xin+Massage+KL" class="flex-1 bg-white hover:bg-slate-100 text-slate-900 py-2 rounded-lg text-center text-sm font-medium transition">Apple Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stop 8 -->
+        <div class="relative pl-16 mb-12">
+            <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+                <img src="https://images.unsplash.com/photo-1555620246-8be05f661081?auto=format&fit=crop&q=80&w=800" alt="Heli Lounge Bar" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h2 class="text-xl font-bold">Heli Lounge Bar</h2>
+                            <p class="gold-text text-sm">直升机停机坪</p>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">06:45 PM</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        360°无遮挡的绝美日落。在真实的直升机停机坪上，没有任何护栏感，看吉隆坡天际线。注意：入场有 Dress Code（建议长裤、包鞋，谢绝短裤拖鞋）。
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="comgooglemaps://?q=Heli+Lounge+Bar" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 rounded-lg text-center text-sm font-medium transition">Google Maps</a>
+                        <a href="http://maps.apple.com/?q=Heli+Lounge+Bar" class="flex-1 bg-white hover:bg-slate-100 text-slate-900 py-2 rounded-lg text-center text-sm font-medium transition">Apple Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stop 9 -->
+        <div class="relative pl-16 mb-12">
+            <div class="absolute left-8 top-0 w-4 h-4 rounded-full gold-bg shadow-[0_0_10px_#d4af37] z-10"></div>
+            <div class="glass rounded-2xl overflow-hidden shadow-xl transition-transform hover:scale-[1.02]">
+                <img src="https://images.unsplash.com/photo-1563833717765-00462801314e?auto=format&fit=crop&q=80&w=800" alt="Wong Ah Wah" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h2 class="text-xl font-bold">Wong Ah Wah (WAW)</h2>
+                            <p class="gold-text text-sm">黄亚华小食店</p>
+                        </div>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">08:30 PM</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        阿罗街（Jalan Alor）的尽头。烧鸡翅和福建面是必点项目。用充满镬气的吉隆坡街头美食，为完美的一天划上句号。
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="comgooglemaps://?q=Wong+Ah+Wah+Jalan+Alor" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white py-2 rounded-lg text-center text-sm font-medium transition">Google Maps</a>
+                        <a href="http://maps.apple.com/?q=Wong+Ah+Wah+Jalan+Alor" class="flex-1 bg-white hover:bg-slate-100 text-slate-900 py-2 rounded-lg text-center text-sm font-medium transition">Apple Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-center py-12 text-slate-500 text-sm">
+        <p>© 2026 KL Travel Agency. Sophisticated Explorers Only.</p>
+    </footer>
 
 </body>
 </html>
