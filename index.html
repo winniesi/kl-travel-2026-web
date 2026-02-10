@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KL 2026 | Premium Travel Guide</title>
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #d4af37;
+            --text: #333;
+            --bg: #f4f4f4;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        header h1 { font-size: 3rem; margin-bottom: 10px; }
+        .container {
+            max-width: 1000px;
+            margin: -50px auto 50px;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width: 768px) {
+            .card { flex-direction: row; }
+            .card-img { width: 45%; }
+            .card-content { width: 55%; }
+        }
+        .card-img {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+        .card-content {
+            padding: 30px;
+        }
+        .card h2 { margin-top: 0; color: var(--primary); }
+        .why-section {
+            background: #fffdf5;
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        .tag {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kuala Lumpur 2026</h1>
+    <p>Experience the Fusion of Culture, Heritage, and Modernity</p>
+</header>
+
+<div class="container">
+    <!-- Petronas Towers -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1596422846543-75c6fc18a594?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="card-content">
+            <span class="tag">Iconic Landmark</span>
+            <h2>Petronas Twin Towers</h2>
+            <p>Once the tallest buildings in the world, these silver spires remain the definitive symbol of modern Malaysia.</p>
+            <div class="why-section">
+                <strong>Why This Place? / 推荐理由:</strong><br>
+                The architectural heartbeat of KL. Seeing them illuminated at night is a quintessential "arrival" moment in the city. / 吉隆坡的建筑灵魂。夜晚灯光亮起时，那一抹银色足以震撼人心。
+            </div>
+        </div>
+    </div>
+
+    <!-- ICC Pudu -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1626074210452-959c55b706f9?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="card-content">
+            <span class="tag">Culinary Soul</span>
+            <h2>ICC Pudu Morning Market</h2>
+            <p>A bustling hub where locals gather for the authentic taste of Kuala Lumpur's breakfast heritage.</p>
+            <div class="why-section">
+                <strong>Why This Place? / 推荐理由:</strong><br>
+                The soul of KL breakfast. Try the Ginger Wine Mee to warm your stomach after a cold flight. / 吉隆坡早餐之魂。一碗姜酒米，暖胃又暖心。
+            </div>
+        </div>
+    </div>
+
+    <!-- Petaling Street -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="card-content">
+            <span class="tag">Heritage & Culture</span>
+            <h2>Petaling Street (Chinatown)</h2>
+            <p>Walk through history in the heart of KL, where traditional lanterns hang over modern cafes and historic temples.</p>
+            <div class="why-section">
+                <strong>Why This Place? / 推荐理由:</strong><br>
+                A sensory overload of street food, smells, and history. It's where the city's past meets its vibrant present. / 历史与充满活力的现状在这里交汇，是感受市井气息的最佳去处。
+            </div>
+        </div>
+    </div>
+
+    <!-- Nasi Lemak -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1528605248644-14dd04cb220d?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="card-content">
+            <span class="tag">Local Flavor</span>
+            <h2>Authentic Nasi Lemak</h2>
+            <p>The unofficial national dish of Malaysia—fragrant coconut rice served with spicy sambal, crispy anchovies, and peanuts.</p>
+            <div class="why-section">
+                <strong>Why This Place? / 推荐理由:</strong><br>
+                No trip is complete without it. It's the flavor of Malaysia in a single plate. / 马来西亚的国民美食，只有吃过椰浆饭，才算完整地体验了这里。
+            </div>
+        </div>
+    </div>
+
+    <!-- KL Skyline -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&w=800&q=80');"></div>
+        <div class="card-content">
+            <span class="tag">Panoramic Views</span>
+            <h2>Sunset Skyline</h2>
+            <p>End your day at a rooftop lounge, watching the urban sprawls of KL transform into a sea of lights.</p>
+            <div class="why-section">
+                <strong>Why This Place? / 推荐理由:</strong><br>
+                Perfect for golden hour photography and capturing the sheer scale of the city's rapid evolution. / 完美的黄金摄影时间，在云端俯瞰这座城市的飞速演变。
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 KL Travel Web. Designed for the discerning traveler.</p>
+</footer>
+
+</body>
+</html>
