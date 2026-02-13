@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penang Deep Travel | Winnie 2026</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
+
         :root {
             --bg-color: #fdfaf5;
             --primary-green: #2d5a27;
@@ -14,28 +16,146 @@
             --card-bg: #ffffff;
             --border-color: #ecf0f1;
         }
-        body { font-family: 'Noto Sans SC', sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 20px; line-height: 1.8; }
-        header { text-align: center; margin-bottom: 40px; }
-        h1 { color: var(--primary-green); font-size: 1.8em; margin-bottom: 5px; }
-        .meta { font-size: 0.9em; color: #7f8c8d; }
-        .day-section { margin-bottom: 50px; }
-        .day-header { font-size: 1.4em; color: var(--accent-red); border-bottom: 2px solid var(--accent-red); display: inline-block; margin-bottom: 25px; font-weight: 700; }
-        .card { background: var(--card-bg); border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid var(--border-color); position: relative; }
-        .card h3 { margin-top: 0; color: var(--primary-green); font-size: 1.2em; display: flex; align-items: center; justify-content: space-between; }
-        .time { font-size: 0.85em; background: #f0f4f0; color: var(--primary-green); padding: 2px 8px; border-radius: 4px; }
-        .content { font-size: 0.95em; color: #576574; margin: 15px 0; }
-        .commute-tag { display: inline-block; font-size: 0.8em; padding: 4px 10px; border-radius: 20px; margin-bottom: 15px; background: #fdfaf5; border: 1px solid #dcdde1; font-weight: 400; }
-        .links { border-top: 1px solid #f1f2f6; padding-top: 15px; margin-top: 15px; display: flex; gap: 15px; }
-        .links a { text-decoration: none; font-size: 0.85em; color: var(--text-color); border-bottom: 1px solid #bdc3c7; transition: all 0.3s; }
-        .links a:hover { color: var(--primary-green); border-bottom-color: var(--primary-green); }
-        .exclusive { border: 2px solid var(--accent-red); background: #fffcfc; }
-        .exclusive h3 { color: var(--accent-red); }
-        .tips-box { background: #34495e; color: white; padding: 25px; border-radius: 12px; margin-top: 40px; }
-        .tips-box h3 { color: #f1c40f; margin-top: 0; }
-        .tips-box ul { padding-left: 20px; margin-bottom: 0; }
-        footer { text-align: center; font-size: 0.8em; color: #bdc3c7; margin-top: 50px; }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--primary-green);
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+
+        .meta {
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+
+        .day-section {
+            margin-bottom: 50px;
+        }
+
+        .day-header {
+            font-size: 1.4em;
+            color: var(--accent-red);
+            border-bottom: 2px solid var(--accent-red);
+            display: inline-block;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary-green);
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .time {
+            font-size: 0.85em;
+            background: #f0f4f0;
+            color: var(--primary-green);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .content {
+            font-size: 0.95em;
+            color: #576574;
+            margin: 15px 0;
+        }
+
+        .commute-tag {
+            display: inline-block;
+            font-size: 0.8em;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            background: #fdfaf5;
+            border: 1px solid #dcdde1;
+            font-weight: 400;
+        }
+
+        .links {
+            border-top: 1px solid #f1f2f6;
+            padding-top: 15px;
+            margin-top: 15px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .links a {
+            text-decoration: none;
+            font-size: 0.85em;
+            color: var(--text-color);
+            border-bottom: 1px solid #bdc3c7;
+            transition: all 0.3s;
+        }
+
+        .links a:hover {
+            color: var(--primary-green);
+            border-bottom-color: var(--primary-green);
+        }
+
+        .exclusive {
+            border: 2px solid var(--accent-red);
+            background: #fffcfc;
+        }
+
+        .exclusive h3 {
+            color: var(--accent-red);
+        }
+
+        .tips-box {
+            background: #34495e;
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        .tips-box h3 {
+            color: #f1c40f;
+            margin-top: 0;
+        }
+
+        .tips-box ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #bdc3c7;
+            margin-top: 50px;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1>槟城慢旅行攻略</h1>
@@ -100,7 +220,7 @@
         <div class="card">
             <div class="commute-tag">🚗 Grab (7km / 18 min)</div>
             <h3><span>广泰祥 Kong Thai Lai</span> <span class="time">09:00</span></h3>
-            <div class="content">进入老城区，开始遗产区深度游。这里的烤面包非常酥脆。</div>
+            <div class="content">可以进入老城区，开始遗产区深度游。这里的烤面包非常酥脆。</div>
             <div class="links">
                 <a href="https://www.google.com/maps/search/?api=1&query=Kong+Thai+Lai+Coffee+Clinic">📍 Google Maps</a>
                 <a href="http://maps.apple.com/?q=Kong+Thai+Lai+Coffee+Clinic">🍏 Apple Maps</a>
@@ -133,7 +253,8 @@
             <h3><span>Sunshine Farlim 采购</span> <span class="time">10:00</span></h3>
             <div class="content">除夕补给日。买好水饺、火锅料、零食和红毛丹，准备晚上守岁。</div>
             <div class="links">
-                <a href="https://www.google.com/maps/search/?api=1&query=Sunshine+Farlim+Shopping+Mall">📍 Google Maps</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Sunshine+Farlim+Shopping+Mall">📍 Google
+                    Maps</a>
                 <a href="http://maps.apple.com/?q=Sunshine+Farlim+Shopping+Mall">🍏 Apple Maps</a>
             </div>
         </div>
@@ -161,4 +282,5 @@
 
     <footer>Created by Lingxi Agent ✨ | Enjoy Penang</footer>
 </body>
+
 </html>
