@@ -38,18 +38,18 @@
 
     <!-- Sticky Nav -->
     <nav class="sticky-nav flex justify-around py-3 text-sm font-medium text-gray-600 shadow-sm">
-        <a href="#day13" class="hover:text-[var(--heritage-red)] transition">13 · 抵达</a>
-        <a href="#day14" class="hover:text-[var(--heritage-red)] transition">14 · 升旗山</a>
-        <a href="#day15" class="hover:text-[var(--heritage-red)] transition">15 · 乔治市</a>
-        <a href="#day16" class="hover:text-[var(--heritage-red)] transition">16 · 除夕</a>
+        <a href="#day-2026-02-13" class="nav-link px-2 transition">13 · 抵达</a>
+        <a href="#day-2026-02-14" class="nav-link px-2 transition">14 · 升旗山</a>
+        <a href="#day-2026-02-15" class="nav-link px-2 transition">15 · 乔治市</a>
+        <a href="#day-2026-02-16" class="nav-link px-2 transition">16 · 除夕</a>
     </nav>
 
     <div class="max-w-2xl mx-auto px-5 mt-8 space-y-12">
 
         <!-- Day 13 -->
-        <section id="day13" class="scroll-mt-20">
+        <section id="day-2026-02-13" class="scroll-mt-20 day-section">
             <h2 class="text-xl font-bold text-[var(--heritage-red)] mb-4 flex items-center gap-2">
-                <span class="text-2xl">🛬</span> 2月13日 (今天) · 抵达与安顿
+                <span class="text-2xl">🛬</span> <span class="date-label" data-date="2026-02-13">2月13日</span> · 抵达与安顿
             </h2>
             
             <div class="bg-white rounded-2xl p-5 mb-4 card-shadow border border-gray-50 relative overflow-hidden">
@@ -84,9 +84,9 @@
         </section>
 
         <!-- Day 14 -->
-        <section id="day14" class="scroll-mt-20">
+        <section id="day-2026-02-14" class="scroll-mt-20 day-section">
             <h2 class="text-xl font-bold text-[var(--heritage-red)] mb-4 flex items-center gap-2">
-                <span class="text-2xl">🌄</span> 2月14日 (明天) · 家门口错峰游
+                <span class="text-2xl">🌄</span> <span class="date-label" data-date="2026-02-14">2月14日</span> · 家门口错峰游
             </h2>
 
             <!-- Morning -->
@@ -131,9 +131,9 @@
         </section>
 
         <!-- Day 15 -->
-        <section id="day15" class="scroll-mt-20">
+        <section id="day-2026-02-15" class="scroll-mt-20 day-section">
             <h2 class="text-xl font-bold text-[var(--heritage-red)] mb-4 flex items-center gap-2">
-                <span class="text-2xl">🏛️</span> 2月15日 (后天) · 乔治市慢时光
+                <span class="text-2xl">🏛️</span> <span class="date-label" data-date="2026-02-15">2月15日</span> · 乔治市慢时光
             </h2>
 
             <div class="bg-white rounded-2xl p-5 mb-4 card-shadow border border-gray-50">
@@ -167,9 +167,9 @@
         </section>
 
         <!-- Day 16: EVE -->
-        <section id="day16" class="scroll-mt-20">
+        <section id="day-2026-02-16" class="scroll-mt-20 day-section">
             <h2 class="text-xl font-bold text-[var(--heritage-red)] mb-4 flex items-center gap-2">
-                <span class="text-2xl">🧨</span> 2月16日 (除夕) · 民宿守岁 & 万灯之夜
+                <span class="text-2xl">🧨</span> <span class="date-label" data-date="2026-02-16">2月16日</span> · 民宿守岁 & 万灯之夜
             </h2>
 
             <div class="bg-red-50 rounded-2xl p-6 mb-6 border border-red-100 shadow-sm">
@@ -211,5 +211,42 @@
         </footer>
 
     </div>
+
+    <!-- 动态时间与自动定位脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const now = new Date();
+            // 马来西亚/北京时间偏移量 (GMT+8)
+            const todayStr = new Date(now.getTime() + (8 * 60 * 60 * 1000)).toISOString().split('T')[0];
+            
+            // 1. 动态更新“今天/明天/昨天”文本
+            document.querySelectorAll('.date-label').forEach(el => {
+                const date = el.getAttribute('data-date');
+                const targetDate = new Date(date);
+                const diffTime = Math.ceil((targetDate - now) / (1000 * 60 * 60 * 24));
+                
+                if (date === todayStr) {
+                    el.innerText += " (今天)";
+                    el.classList.add('text-orange-600');
+                } else if (diffTime === 1) {
+                    el.innerText += " (明天)";
+                } else if (diffTime === -1) {
+                    el.innerText += " (昨天)";
+                }
+            });
+
+            // 2. 自动定位到当天的 ID
+            const todayId = `day-${todayStr}`;
+            const targetSection = document.getElementById(todayId);
+            if (targetSection) {
+                setTimeout(() => {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                    // 高亮导航
+                    const activeNavLink = document.querySelector(`nav a[href="#${todayId}"]`);
+                    if (activeNavLink) activeNavLink.classList.add('text-[var(--heritage-red)]', 'font-bold');
+                }, 500);
+            }
+        });
+    </script>
 </body>
 </html>
